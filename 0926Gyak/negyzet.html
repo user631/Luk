@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+        width: 300px;
+        height: 300px;
+        border: solid 5px black;
+        position: center;
+        text-align: center;
+        margin: 0 auto;
+        }
+        .gomb{
+            width: 150px;
+        }
+        .terker{
+            width:25px;
+        }
+        #nev{
+            width:75px;
+        }
+        .szam1{
+        font-size: 20px;
+        color: purple;
+        }
+        .szam2{
+        font-size: 20px;
+        color: purple;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="div">
+        <h1>Négyzet oldala</h1>
+        <input type="number" name="beker" id="beker" class="bemezo">
+        <p><button id="ellenoriz" class="gomb" onclick="szamol()">Számol</button></p>
+        <p>Területe: <div class="teruletKi"></div></p>
+        <p>Kerülete: <div class="keruletKi"></div></p>
+    </div>
+
+    <script>
+        let be;
+        let terulet;
+        let kerulet;
+        function szamol(){
+            be = document.getElementById('beker').value
+            terulet = be*be;
+            kerulet = 4*be;
+            document.querySelector('.teruletKi').innerHTML= terulet
+            document.querySelector('.keruletKi').innerHTML= kerulet
+        }
+    </script>
+
+</body>
+</html>
