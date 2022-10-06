@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    let numbers = [40,1,12,31,10,20,30]
+    let animals=['cat','dog','elephant','bee','ant']
+    console.log(numbers)
+    console.log(numbers.sort())
+    //növekvő
+    console.log(numbers.sort((a,b)=>a-b))
+    //csökkenő sorrend
+    console.log(numbers.sort((a,b)=>b-a))
+    //stringeket tartalmazó tömb sorrendezése
+    console.log(animals)
+    //csökkenő
+    console.log(animals.sort((a,b)=>a>b ? -1 : 1))
+    //növekvő
+    console.log(animals.sort((a,b)=>a>b ? 1 : -1))
+    //tömb keverése
+    console.log(numbers.sort(()=>0.5-Math.random()))
+    //objektumokat tartalmazótömb rendezése egy-egy obj.attributuma szerint:
+    let users = [
+        {id:1,name: "John", age: 30, car:null},
+        {id:2,name: "Carlos", age: 25, car:"Toyota"},
+        {id:3,name: "Brandon", age: 65, car:"BWM"},
+        {id:4,name: "Carol", age: 34, car:"Mercedes"},
+        {id:5,name: "Conway", age: 36, car:"Mazda"},
+        console.log(users)
+
+        //console.log(users.sort((o1,o2)=>o1.name>o2.name ? i : -1))
+
+        let sortedArr = [...users].sort((o1.o2)=>)
+
+</script>
+
+</body>
+</html>
