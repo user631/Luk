@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Képcsere</title>
+
+    <style>
+        .kepmeret{
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <img class="img-fluid kepmeret" src="fold.jpg" alt="Föld">
+        </div>
+        <div class="row">
+            <input type="button" value="Képcsere itt most!" onclick="csere()" class="btn btn-danger">
+        </div>
+    </div>
+
+    <script>
+
+        let kettovel_oszthato_e = 0;
+        function csere(){
+            kettovel_oszthato_e++;
+            if(kettovel_oszthato_e % 2 == 0){
+            document.querySelector("img").src="fold.jpg"
+            }else{
+            document.querySelector("img").src="mars.jpg"
+            }
+        }
+
+    </script>
+
+</body>
+</html>

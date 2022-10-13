@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Számológép</title>
+    <style>
+        .div{
+        width: 500px;
+        height: 250px;
+        border: solid 5px black;
+        position: center;
+        text-align: center;
+        margin: 0 auto;
+        }
+        .gomb{
+            width: 50px;
+        }
+        .eredmenyKi{
+            width: 400px;
+            height: 25px;
+            margin: 10px auto;
+        }
+        .bemezo{
+            width: 400px;
+            margin: 10px 10px 10px 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container border border-primary div">
+        <h1>Egyszerű számológép</h1>
+        <input type="number" name="beker" id="beker" class="bemezo border border-secondary rounded" placeholder="Add meg az egyik számot!">
+        <input type="number" name="beker" id="beker2" class="bemezo border border-secondary rounded" placeholder="Add meg a másik számot!">
+        <div class="eredmenyKi border border-dark bg-light"></div>
+        <p><button id="osszead" class="gomb btn btn-primary" onclick="osszeadfunct()">+</button>
+        <button id="kivon" class="gomb btn btn-primary" onclick="kivonfunct()">-</button>
+        <button id="oszt" class="gomb btn btn-primary" onclick="osztfunct()">/</button>
+        <button id="szoroz" class="gomb btn btn-primary" onclick="szorozfunct()">*</button></p>
+        
+    </div>
+
+    <script>
+        let osszead;
+        let kivon;
+        let oszt;
+        let szoroz;
+
+        function osszeadfunct(){
+            osszead = Number(document.getElementById('beker').value) + Number(document.getElementById('beker2').value)
+            document.querySelector('.eredmenyKi').innerHTML= `Az összeadás eredménye: ${osszead}`
+        }
+        function kivonfunct(){
+            kivon = Number(document.getElementById('beker').value) - Number(document.getElementById('beker2').value)
+            document.querySelector('.eredmenyKi').innerHTML= `A kivonás eredménye: ${kivon}`
+        }
+        function osztfunct(){
+            oszt = Number(document.getElementById('beker').value) / Number(document.getElementById('beker2').value)
+            document.querySelector('.eredmenyKi').innerHTML= `Az osztás eredménye: ${oszt}`
+        }
+        function szorozfunct(){
+            szoroz = Number(document.getElementById('beker').value) * Number(document.getElementById('beker2').value)
+            document.querySelector('.eredmenyKi').innerHTML= `A szorzás eredménye: ${szoroz}`
+        }
+    </script>
+
+</body>
+</html>

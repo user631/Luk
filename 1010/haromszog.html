@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <label for="a">a: </label>
+        <input type="number" id="a">
+    
+    
+        <label for="b">b: </label>
+        <input type="number" id="b">
+    
+   
+        <label for="c">c: </label>
+        <input type="number" id="c">
+    
+    
+    <input type="button" value="Megvizsgál" onclick="megvizsgal()">
+    </form>
+    <div class="eredmeny"></div>
+
+    <script>
+
+    function megvizsgal(){
+        document.querySelector(".eredmeny").innerHTML=""
+
+        let a =+ document.getElementById('a').value
+        let b =+ document.getElementById('b').value
+        let c =+ document.getElementById('c').value
+        
+        if((a+b)< c){
+            document.querySelector(".eredmeny").innerHTML="Lehet háromszög!"
+        }else{
+            document.querySelector(".eredmeny").innerHTML="Nem lehet háromszög!"
+        }
+    }
+
+    </script>
+
+</body>
+</html>
